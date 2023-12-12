@@ -1,0 +1,46 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="full_name">Full Name:</label>
+<input class='box input' type="text" name="full_name" id="full_name" required>
+<span class="err-name"></span>
+
+<label for="emailId">Email:</label>
+<input class='box-email input' type="text" name="emailId" id="emailId" required>
+<span class="err-email"></span>
+
+<!-- Add other form elements with appropriate classes and error spans -->
+
+
+
+    <label for="phone_number">Phone Number:</label>
+    <input class='input' type="text" name="phone_number" id="phone_number">
+
+    <label for="education">Education:</label>
+    <input class='input' type="text" name="education" id="education" required>
+
+    <label for="university">University Name:</label>
+    <input class='input' type="text" name="university" id="university" required>
+
+    <label for="lab_name">Lab Name:</label>
+    <input class='input' type="text" name="lab_name" id="lab_name" required>
+
+    <label for="lab_address">Lab Address:</label>
+    <input class='input' type="text" name="lab_address" id="lab_address" required>
+
+    <label for="lab_city">Lab-In City:</label>
+    <input class='input' type="text" name="lab_city" id="lab_city" required>
+
+    <label for="lab_district">Lab-In District:</label>
+    <input class='input' type="text" name="lab_district" id="lab_district" required>
+
+    <label for="password_hash">Password:</label>
+    <input class='box-3 input' type="password" name="password_hash" id="password_hash" required>
+    <span class="err-password"></span>
+
+    <label for="confirm_password">Confirm Password:</label>
+    <input class='box-4 input' type="password" name="confirm_password" id="confirm_password" required>
+    <span class="err-confirm-password"></span>
+
+    <button class='form-submit' type="button">Register</button>
+    <div class="submit-msg"></div>
+</form>

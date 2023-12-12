@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+		/* POPPINS FONT */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    background: #ececec;
+    padding: 0 0 0 20px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.side-image{
+    background-image: url("https://img.freepik.com/free-vector/doctor-technicians-discussing-medical-record_1262-19767.jpg");
+    background-position: center;
+   
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.row{
+  width:  900px;
+  height:550px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text p{
+    color: #fff;
+    font-size: 20px; 
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input-box{
+  width: 330px;
+  box-sizing: border-box;
+}
+img{
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.input-box header{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 13px;
+  }
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 13px;
+   color: #5d5076;
+ }
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+ }
+ .submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #63C5CA;
+    color: #fff;
+    border-radius: 5px;
+    transition: .4s;
+ }
+ .submit:hover{
+    background: rgba(37, 95, 156, 0.937);
+    color: #fff;
+ }
+ .signin{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p, i{
+        font-size: 16px;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
+}
+
+nav {
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .nav__logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .nav__links {
+    padding: 2px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .link a {
+    text-decoration: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .link a:hover {
+    color:  #63C5CA;
+  }
+  .bb{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #63C5CA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .sadan {
+    color: #63C5CA;
+}
+  
+	</style>
+	<title>Login</title>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+        <div class="nav__logo">Seva<span class="sadan">sadan</span> Cardio</div>
+
+        <ul class="nav__links">
+          <li class="link"><a href="/">Home</a></li>
+         
+          <li class="link"><a href="#">Cardio Health Blogs</a></li>
+          <li class="link"><a href="#">Contact Us </a></li>
+        </ul>
+     
+        <a  class="bb" href="/login" >Login</a>
+      </nav>
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-6 side-image">
+                         
+                
+                <div class="text">
+                    
+                </div>
+                
+            </div>
+
+            <div class="col-md-6 right">
+                
+                <div class="input-box">
+                    <form action="{% url 'admin_login' %}" method="post">
+						{% csrf_token %}
+                        <h2>Register With Us</h2>
+                        <div class="form-control">
+                          <label for="username">Username</label>
+                          <input type="text" id="username" placeholder="Enter username" />
+                          <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                          <label for="email">Email</label>
+                          <input type="text" id="email" placeholder="Enter email" />
+                          <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                          <label for="password">Password</label>
+                          <input type="password" id="password" placeholder="Enter password" />
+                          <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                          <label for="password2">Confirm Password</label>
+                          <input
+                            type="password"
+                            id="password2"
+                            placeholder="Enter password again"
+                          />
+                          <small>Error message</small>
+                        </div>
+                        <button type="submit">Submit</button>
+				</form>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
+
+// Show input error message
+function showError(input, message) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-control error';
+  const small = formControl.querySelector('small');
+  small.innerText = message;
+}
+
+// Show success outline
+function showSuccess(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-control success';
+}
+
+// Check email is valid
+function checkEmail(input) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (re.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Email is not valid');
+  }
+}
+
+// Check required fields
+function checkRequired(inputArr) {
+  let isRequired = false;
+  inputArr.forEach(function(input) {
+    if (input.value.trim() === '') {
+      showError(input, `${getFieldName(input)} is required`);
+      isRequired = true;
+    } else {
+      showSuccess(input);
+    }
+  });
+
+  return isRequired;
+}
+
+// Check input length
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be at least ${min} characters`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} characters`
+    );
+  } else {
+    showSuccess(input);
+  }
+}
+
+// Check passwords match
+function checkPasswordsMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, 'Passwords do not match');
+  }
+}
+
+// Get fieldname
+function getFieldName(input) {
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+// Event listeners
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  if(checkRequired([username, email, password, password2])){
+    checkLength(username, 3, 15);
+    checkLength(password, 6, 25);
+    checkEmail(email);
+    checkPasswordsMatch(password, password2);
+  }
+
+});
+
+</script>
+</html>
