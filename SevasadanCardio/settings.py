@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'SevasadanCardio',
         'USER': 'root',
-        'PASSWORD': 'shiripiri@2207',
+        'PASSWORD': '',
         'HOST': 'localhost',  
         'PORT': '3306',      
     }
@@ -141,4 +141,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sevasadancardio@gmail.com'  # Replace with your Gmail email address
-EMAIL_HOST_PASSWORD = 'kpkasoslmsgljmci'  # Replace with your Gmail App Password
+EMAIL_HOST_PASSWORD = ''  # Replace with your Gmail App Password
